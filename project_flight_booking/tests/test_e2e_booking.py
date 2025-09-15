@@ -22,7 +22,6 @@ def test_search_one_way(flight_search_elements, flight_payment_elements):
     payment_elements["cvv"].fill("966")
     payment_elements["book_flight_button"].click()
 
-    # --- validation ---
     expect(page.get_by_role("heading", name="Booking Successful!")).to_be_visible()
 
     
@@ -49,7 +48,6 @@ def test_search_round_trip(flight_search_elements, flight_payment_elements):
     payment_elements["cvv"].fill("966")
     payment_elements["book_flight_button"].click()
 
-    # --- validation ---
     expect(page.get_by_role("heading", name="Booking Successful!")).to_be_visible()
     
     

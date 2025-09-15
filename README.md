@@ -14,7 +14,7 @@ This project contains Playwright automation tests for several practice scenarios
 **1. Clone the repository** (if not already):
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/luchiang1997/testerbud_projects.git
 cd testerbud_projects/project_form
 ```
 

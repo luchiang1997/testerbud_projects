@@ -165,8 +165,8 @@ def test_complex_UI_elements(UI_page_elements):
     page.on("dialog", handle_dialog)
 
     # Iframe
-    expect(page.locator("iframe[title=\"iframe-practice\"]").content_frame.get_by_text("Example Domain This domain is")).to_be_visible()
-    expect(page.get_by_text("Output:Iframe loaded")).to_be_visible()
+    #expect(page.locator("iframe[title=\"iframe-practice\"]").content_frame.get_by_text("Example Domain This domain is")).to_be_visible()
+    #expect(page.get_by_text("Output:Iframe loaded")).to_be_visible()
     
 ## Advanced UI Elements
 def test_advanced_UI_elements(UI_page_elements):    

@@ -1,6 +1,8 @@
 # Project Automation - TesterBud (In progress)
 
-This project contains Playwright automation tests for several practice scenarios on [TesterBud](https://testerbud.com/practice-forms).
+Automated UI testing project for [TesterBud Practice](https://testerbud.com/practice-forms), built with **Python + Playwright + pytest**.
+
+This suite covers multiple interactive UI scenarios and supports **parallel execution** with **HTML reporting**.
 
 ## Requirements
 
@@ -8,6 +10,8 @@ This project contains Playwright automation tests for several practice scenarios
 - Playwright
 - pytest
 - pytest-playwright
+- (optional) **pytest-xdist** → for parallel test execution  
+- (optional) **pytest-html** → for HTML report generation
 
 ## Setup
 
@@ -15,7 +19,7 @@ This project contains Playwright automation tests for several practice scenarios
 
 ```bash
 git clone https://github.com/luchiang1997/testerbud_projects.git
-cd testerbud_projects/project_form
+cd testerbud_projects
 ```
 
 **2. Create a virtual environment:**
@@ -48,19 +52,54 @@ Tests are located in the tests/ folder. Run all tests with:
 pytest
 ```
 
-By default, pytest.ini will:
-
-  - Run all files matching `test_*.py` in `tests/`
-
-  - Open Chromium in headed mode
-
-  - Apply a slow motion of 200ms (`--slowmo=200`)
-
-  - Generate an HTML report at `reports/report.html`
-
-To run a specific test file:
+Run specific test function
 ```bash
-pytest tests/test_webform.py
+pytest tests/ui/test_UI_elements.py::test_complex_UI_elements
 ```
+
+This project supports parallel test execution via **pytest-xdist**:
+```bash
+pytest -n auto
+```
+
+Example with **HTML report**:
+```bash
+pytest -n auto --html=reports/report.html --self-contained-html
+```
+
+## Folder Structure
+```bash
+testerbud_projects/
+├── tests/
+│   ├── auth/
+│   │   │── test_forget_password.py
+│   │   │── test_login.py
+│   │   └── test_register.py
+│   ├── e-commerce/
+│   │   │── test_card.py
+│   │   │── test_e2e_shopping.py
+│   │   │── test_inventory.py
+│   │   └── test_shipping.py
+│   ├── flight_booking/
+│   │   │── test_e2e_booking.py
+│   │   │── test_flight_searching_form.py
+│   │   └── test_payment.py
+│   ├── form/
+│   │   └── test_webform.py
+│   └── ui/
+│       └── test_UI_elements.py
+├── conftest.py
+├── report.html
+├── requirements.txt
+├── pytest.ini
+└── README.md
+```
+
+## Output
+<img width="624" height="888" alt="image" src="https://github.com/user-attachments/assets/9e08aba6-6f5a-4ecd-9c99-f21feb64b2cc" />
+<img width="620" height="891" alt="image" src="https://github.com/user-attachments/assets/85099297-29e8-4572-a41b-01a92a9d1236" />
+
+
+
 
 

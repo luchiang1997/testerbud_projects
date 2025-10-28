@@ -99,6 +99,13 @@ testerbud_projects/
 <img width="624" height="888" alt="image" src="https://github.com/user-attachments/assets/9e08aba6-6f5a-4ecd-9c99-f21feb64b2cc" />
 <img width="620" height="891" alt="image" src="https://github.com/user-attachments/assets/85099297-29e8-4572-a41b-01a92a9d1236" />
 
+## 💡 Learnings & Reflections
+
+- Explored various **UI elements** and tested multiple **real-world scenarios** to simulate practical automation challenges.  
+- Experimented with both **tuple/unpacking** and **dictionary-based** approaches for handling test data.  
+  After hands-on experience, found that the **dictionary-based method** provides better **maintainability and scalability**.  
+- Implemented **parallel execution** using multi-core processing to significantly **reduce total runtime**.  
+- Utilised **GitHub Copilot AI** to assist in **code refactoring** and receive intelligent **suggestions** for improving structure and readability.
 
 
 
